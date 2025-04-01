@@ -1,0 +1,27 @@
+{
+  "name": "api-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && nodemon index.js",
+    "client": "cd client && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayushgups/API-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ayushgups/API-project/issues"
+  },
+  "homepage": "https://github.com/ayushgups/API-project#readme",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
