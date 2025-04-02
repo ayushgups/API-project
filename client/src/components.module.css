@@ -123,6 +123,7 @@
     display: flex;
     gap: 20px;
   }
+
   
   .artistsImage,
   .albumsImage {
@@ -131,6 +132,10 @@
     object-position: center;
     width: 50%;
     overflow: hidden;
+ }
+
+ .albumsImage {
+    margin-left: 90px;
   }
   
   .artistsInfo,
@@ -154,13 +159,18 @@
   
   .artistsList,
   .genresList {
-    list-style: none;
+    list-style-type: decimal;
     padding: 0;
     margin-top: 28px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
     line-height: 69px;
   }
+
+  .genresList {
+    margin-left: 40px;
+  }
+
   
   @media (width <= 991px) {
     .teamHeader {

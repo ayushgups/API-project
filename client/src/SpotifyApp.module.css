@@ -27,9 +27,11 @@
   .contentSection {
     background-color: #1ed760;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100%;
     padding-right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   
   .sectionWrapper {
@@ -40,12 +42,18 @@
     .thumbnail {
       padding-left: 20px;
       padding-right: 20px;
+      background-color: #060606;
+    padding-left: 80px;
+    overflow: hidden;
+    min-height: 100vh; /* Add this */
+    display: flex;
+    align-items: stretch; /* Optional: make sure children stretch */
     }
   
     .contentWrapper {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
+      gap: 20px;
+      display: flex;
+      align-items: stretch; /* This helps both columns fill evenly */
     }
   
     .leftColumn,
