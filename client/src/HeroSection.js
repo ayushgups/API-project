@@ -5,6 +5,11 @@ function HeroSection() {
   return (
     <section className={styles.heroSection}>
       <div className={styles.titleContainer}>
+        <img
+          src="https://download.logo.wine/logo/Spotify/Spotify-Logo.wine.png"
+          alt="Spotify logo"
+          className={styles.logo}
+        />
         <h1 className={styles.appTitle}>
           Spotify <br /> App
         </h1>
