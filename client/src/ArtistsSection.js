@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from 'react';
 import styles from "./components.module.css";
+import { ArtistContext } from './context/ArtistContext';
 
 function ArtistsSection() {
+  const [artists, setArtists] = useState([]);
+  const { showArtists } = useContext(ArtistContext);
+
+  useEffect(() => {
+    fetch('http://localhost:5050/api/top-artists')
+      .then(res => res.json())
+      .then(data => setArtists(data))
+      .catch(err => console.error('Error fetching top artists:', err));
+  }, []);
+
   return (
     <section className={styles.artistsSection}>
       <div className={styles.artistsContent}>
@@ -10,13 +21,15 @@ function ArtistsSection() {
           alt="Artists visualization"
           className={styles.artistsImage}
         />
+
         <div className={styles.artistsInfo}>
           <h2 className={styles.sectionTitle}>Artists</h2>
           <ul className={styles.artistsList}>
-            <li>Drake</li>
-            <li>Playboi Carti</li>
-            <li>The Weekend</li>
-            <li>Arjit Singh</li>
+            {[0, 1, 2, 3].map(index => (
+              <li key={index}>
+                {showArtists && artists[index] ? artists[index].name : ''}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
