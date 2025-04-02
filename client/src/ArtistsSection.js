@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styles from "./components.module.css";
 import { ArtistContext } from './context/ArtistContext';
+import axios from 'axios';
 
 function ArtistsSection() {
   const [artists, setArtists] = useState([]);
   const { showArtists } = useContext(ArtistContext);
 
   useEffect(() => {
-    fetch('http://localhost:5050/api/top-artists')
-      .then(res => res.json())
-      .then(data => setArtists(data))
+    axios.get('http://localhost:5050/api/top-artists')
+      .then(res => setArtists(res.data))
       .catch(err => console.error('Error fetching top artists:', err));
   }, []);
 
@@ -17,7 +17,7 @@ function ArtistsSection() {
     <section className={styles.artistsSection}>
       <div className={styles.artistsContent}>
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/e7cf3cb3a9c709d7b1f905d26407543a66c569d3?placeholderIfAbsent=true&apiKey=a28e4256a4044605ba5f20bd189a07b1"
+          src="/ArtistsPic.svg"
           alt="Artists visualization"
           className={styles.artistsImage}
         />

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import styles from "./components.module.css";
 import { ArtistContext } from './context/ArtistContext';
 import { SongContext } from './context/SongContext';
+import axios from 'axios';
 
 
 function AlbumsSection() {
@@ -9,9 +10,8 @@ function AlbumsSection() {
   const { showSongs } = useContext(SongContext);
 
   useEffect(() => {
-    fetch('http://localhost:5050/api/top-songs')
-      .then(res => res.json())
-      .then(data => setSongs(data))
+    axios.get('http://localhost:5050/api/top-songs')
+      .then(res => setSongs(res.data))
       .catch(err => console.error('Error fetching top artists:', err));
   }, []);
 
@@ -29,7 +29,7 @@ function AlbumsSection() {
             </ul>
         </div>
         <img
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/fbb30880946ec0949dc77228d694c7f29c48b44b?placeholderIfAbsent=true&apiKey=a28e4256a4044605ba5f20bd189a07b1"
+          src="/SongsPicture.svg"
           alt="Albums visualization"
           className={styles.albumsImage}
         />

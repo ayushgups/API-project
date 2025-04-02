@@ -104,8 +104,6 @@
     line-height: 1.1;
   }
 
-
-
   
   .button {
     background-color: #1ed760;
@@ -141,7 +139,14 @@
   .artistsImage {
     margin-top: -40px;
   }
-  
+
+  .albumsImage {
+    margin-bottom: -25px;
+    margin-right: 20px;
+    size: 120%;
+  }
+
+
   .artistsContent,
   .albumsContent {
     display: flex;
@@ -158,8 +163,11 @@
     overflow: hidden;
  }
 
- .albumsImage {
-    margin-left: 90px;
+  .albumsInfo {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    overflow-wrap: break-word;
   }
   
   .artistsInfo,
