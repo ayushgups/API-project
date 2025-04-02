@@ -36,6 +36,29 @@ app.get('/api/top-artists', async (req, res) => {
   
 });
 
+app.get('/api/top-songs', async (req, res) => {
+  try {
+    const response = await fetch('https://api.spotify.com/v1/me/top/tracks?limit=4', {
+      headers: {
+        Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`
+      }
+});
+
+    const data = await response.json();
+
+    const topSongs = data.items.map(song => ({
+      name: song.name,
+      image: song.album.images[0]?.url, // highest quality album image
+      url: song.external_urls.spotify
+    }));
+
+    res.json(topSongs);
+  } catch (err) {
+    console.error('❌ Error fetching top songs:', err.message || err);
+    res.status(500).json({ error: 'Failed to fetch top songs' });
+  }
+  
+});
 
 
 app.listen(PORT, () => {

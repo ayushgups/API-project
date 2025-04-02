@@ -6,12 +6,15 @@ import ActionButtons from "./ActionButtons";
 import ArtistsSection from "./ArtistsSection";
 import AlbumsSection from "./AlbumsSection";
 import { ArtistProvider } from './context/ArtistContext';
+import { SongProvider } from './context/SongContext';
+
 
 
 function App() {
 
   return (
     <ArtistProvider>
+    <SongProvider>
       <main className={styles.appContainer}>
         <section className={styles.thumbnail}>
           <div className={styles.contentWrapper}>
@@ -31,7 +34,9 @@ function App() {
           </div>
         </section>
       </main>
+    </SongProvider>
     </ArtistProvider>
+    
   );
 }
 
