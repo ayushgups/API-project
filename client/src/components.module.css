@@ -1,0 +1,222 @@
+.teamHeader {
+    width: 100%;
+    margin-top: 27px;
+  }
+  
+  .teamNav {
+    width: 100%;
+  }
+  
+  .teamList {
+    color: #fff;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 403px;
+    max-width: 100%;
+    font-family:
+      Avenir Next,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.1;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .heroSection {
+    margin-top: 120px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .titleContainer {
+    width: 68%;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .appTitle {
+    font-size: 110px;
+    font-weight: 700;
+    line-height: 121px;
+    font-family:
+      Avenir Next,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    margin: 0;
+  }
+  
+  .byline {
+    margin-top: 34px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  
+  .projectType {
+    width: 32%;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family:
+      Avenir Next,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-top: 272px;
+  }
+  
+  .actionButtons {
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 52px;
+    font-family:
+      Avenir Next,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  
+  .button {
+    background-color: #1ed760;
+    border-radius: 28px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 17px 41px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s;
+  }
+  
+  .artistsSection,
+  .albumsSection {
+    margin-top: 40px;
+  }
+  
+  .artistsContent,
+  .albumsContent {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .artistsImage,
+  .albumsImage {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .artistsInfo,
+  .albumsInfo {
+    color: #fff;
+    letter-spacing: 1px;
+    font-family:
+      Avenir Next,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+  }
+  
+  .sectionTitle {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+  }
+  
+  .artistsList,
+  .genresList {
+    list-style: none;
+    padding: 0;
+    margin-top: 28px;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 69px;
+  }
+  
+  @media (width <= 991px) {
+    .teamHeader {
+      margin-top: 40px;
+    }
+  
+    .teamList {
+      white-space: initial;
+    }
+  
+    .heroSection {
+      margin-top: 40px;
+      flex-direction: column;
+    }
+  
+    .titleContainer,
+    .projectType {
+      width: 100%;
+      margin-top: 40px;
+    }
+  
+    .appTitle {
+      font-size: 60px;
+      line-height: 70px;
+    }
+  
+    .actionButtons {
+      margin-top: 40px;
+      margin-right: 10px;
+    }
+  
+    .button {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .artistsContent,
+    .albumsContent {
+      flex-direction: column;
+    }
+  
+    .sectionTitle {
+      text-align: center;
+      font-size: 50px;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .appTitle {
+      font-size: 40px;
+      line-height: 49px;
+    }
+  
+    .sectionTitle {
+      font-size: 36px;
+    }
+  }
+  

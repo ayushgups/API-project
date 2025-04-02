@@ -1,4 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import styles from "./SpotifyApp.module.css";
+import TeamHeader from "./TeamHeader";
+import HeroSection from "./HeroSection";
+import ActionButtons from "./ActionButtons";
+import ArtistsSection from "./ArtistsSection";
+import AlbumsSection from "./AlbumsSection";
 
 function App() {
   const [backendData, setBackendData] = useState(null);
@@ -11,11 +17,25 @@ function App() {
   }, []);
 
   return (
-    <div>
-      <h1>React + Express App</h1>
-      <h2>Backend Message: {backendData} </h2>
-      <p>{backendData || 'Loading...'}</p>
-    </div>
+    <main className={styles.appContainer}>
+      <section className={styles.thumbnail}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.leftColumn}>
+            <TeamHeader />
+            <HeroSection />
+            <ActionButtons />
+          </div>
+          <div className={styles.rightColumn}>
+            <div className={styles.contentSection}>
+              <div className={styles.sectionWrapper}>
+                <ArtistsSection />
+                <AlbumsSection />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 

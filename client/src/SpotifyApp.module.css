@@ -1,0 +1,68 @@
+.appContainer {
+    width: 100%;
+  }
+  
+  .thumbnail {
+    background-color: #060606;
+    padding-left: 80px;
+    overflow: hidden;
+  }
+  
+  .contentWrapper {
+    gap: 20px;
+    display: flex;
+  }
+  
+  .leftColumn {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .rightColumn {
+    width: 55%;
+    margin-left: 20px;
+  }
+  
+  .contentSection {
+    background-color: #1ed760;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 12px;
+  }
+  
+  .sectionWrapper {
+    margin-left: 11px;
+  }
+  
+  @media (width <= 991px) {
+    .thumbnail {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .contentWrapper {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+  
+    .leftColumn,
+    .rightColumn {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .contentSection {
+      margin-top: 40px;
+    }
+  }
+  
+  @media (width <= 640px) {
+    .thumbnail {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  
