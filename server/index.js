@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const YOUR_ACCESS_TOKEN = 'BQCWVRy-Cr5J-vPId5fJF5SoUS8pI-nLweUrhchRHG31jl3QqMbx8kuzfwRIr4icg2LCS6GP7jgDE_fwpVM-U0jFryJPo7ZjvW6MVngF3Swc8wfbHKfDLE9KEvuWZQDL_hypsLrqlmtwPUE1gO59dDjRa0wKxnW4yHYLkX0q4jo7IQYjuRK8myEoF31jQC1rbSj-GtIz-h-LYIQECLsceGsOQTS928ulK5-e4_lLHCXHTkyBOQQ5_V8aaDfdCMvit-kFKHNjVHkhHHPbhtA0P5UZ6mDc71u2JaeweMb_2AMcYj1HDnYOO2JFlMqus57V4IL6JrZaLtr-Pso0ITEeWxvr2tsRuzPtP-CwOcH6BHr2xu-h9OU';
+const YOUR_ACCESS_TOKEN = 'BQB9FmvPKdUBf_T_i-D9xENXxOy5R4uND-TK6mcsSqEiEwBqRS298S3rwtNOyZL1FD2CbajZF4ezyi2ncIPO4Sn9oT1GcW3ae6ppLUOgzRJHaofI7vnBrsW49chmiCSX1Ur7ltVBoqE8FAuMGLha4yMPPedRHusquKmJjqBe03XRZGTLPYLo025-SD1x4evzrxt310V2DiizLPaFe4uFA7cR59Btig6hD3LkcsQxWKyhEX8ioHycnaenlPiQSDi8kGQgO9xAWP0Jf_iNZm7kHW8zPaAyOa5_UCZNpUV9bk2_JFof3lJFGslMGBArkF9uLwQ2qHKhWwycjyTGokGm1ietD0EWb0DJCl85LfeVItArHLQ3J8Q';
 
 const app = express();
 const PORT = 5050;
@@ -14,7 +14,7 @@ app.get('/api/message', (req, res) => {
 
 app.get('/api/top-artists', async (req, res) => {
   try {
-    const response = await fetch('https://api.spotify.com/v1/me/top/artists?limit=4', {
+    const response = await fetch('https://api.spotify.com/v1/me/top/artists?limit=20', {
       headers: {
         Authorization: `Bearer ${YOUR_ACCESS_TOKEN}`
       }
