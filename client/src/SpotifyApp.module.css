@@ -98,4 +98,12 @@ html, body {
       padding-right: 15px;
     }
   }
-  
+ 
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }

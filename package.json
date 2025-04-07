@@ -22,9 +22,12 @@
   },
   "homepage": "https://github.com/ayushgups/API-project#readme",
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "nodemon": "^3.1.9"
   },
   "dependencies": {
-    "axios": "^1.8.4"
+    "axios": "^1.8.4",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
   }
 }

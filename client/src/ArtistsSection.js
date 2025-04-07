@@ -1,17 +1,25 @@
 import React, { useContext, useEffect, useState } from 'react';
 import styles from "./components.module.css";
 import { ArtistContext } from './context/ArtistContext';
+import { useToken } from './context/TokenContext';
 import axios from 'axios';
 
 function ArtistsSection() {
   const [artists, setArtists] = useState([]);
   const { showArtists } = useContext(ArtistContext);
+  const { token } = useToken();
 
   useEffect(() => {
-    axios.get('http://localhost:5050/api/top-artists')
+    if (token) {
+      axios.get('http://localhost:5050/api/top-artists', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then(res => setArtists(res.data))
       .catch(err => console.error('Error fetching top artists:', err));
-  }, []);
+    }
+  }, [token]);
 
   return (
     <section className={styles.artistsSection}>
