@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const TokenContext = createContext();
 
-const HARDCODED_TOKEN = 'BQAHMt57ogBTIus3Drqs_j5kF8oFtrR_mXgAL1iGYfG5XEJMYxl-zl4KTtgWqWlwszu1l-eO7REPNiVBpjceVL5uwiDwgSCr8P7GLGOJaSMTzNdli4XASq1QF0wF-MZXTAeJmss8yV4JW98iweGhBCRNRuPhQkV2SN45Um7C9h7rZCo3KnEXjNd9W9Yc5ZsByw8vRBfnMQ0uBL7XpaLmdvu68-bVQ27qcKfZ4kLpIwUW-sTuTWZBieHD0CEB4Yfw_xij1_QzhBwb8EJ7EdXPHYUec6zepiaOqh_L4teTE5FSgJWDW7mRuhbMjI64AqulwQhizSdO-5HauE3Zx9jTKK2qlSIt3asvUq1NSyk7NvlDdpicXsg';
+const HARDCODED_TOKEN = 'BQCbGqUauBk59VkWFElnrPci1_L8Np4UO9CAwBgADJBnZurgn8AfLiGJ0oGgzX6hDXLtu4UulCTYGTTV0r4c_9jK22EYo1Hgkp6tARJUrgwGG6TI0La0WQPQiWbG6eN6h8ocFYZkLjLaNgIOxm1iRqIiAkFFNXXHF_ldPf_n03Fzchb0ku6g2qoyZfLhMFUNQ3hjSNvFe3zzBjGb8vpiAROJtUzD8P8guEztM7xTmBDuBDXuqwC9iOKaKjBRw1V1-6lKU0B3mr4EsNR-mOnLUe1pWefMf9lYmxMYVdjOrDNnvvGzo09pnvSI-pNB9ATwTQ7_kNAWqRkGNOZTTPhsi-B6wISvNCpx292rCY0kXIyF3yWb8Gc';
 
 export const TokenProvider = ({ children }) => {
   const [token, setToken] = useState(HARDCODED_TOKEN);
